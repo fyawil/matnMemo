@@ -1,10 +1,10 @@
 import React from 'react';
 
-const PDFViewer = () => {
+const PDFViewer = ({PDFURL}) => {
     return (
-        <div style={{ height: '80vh', width: '100%' }}>
+        <div style={{ height: '100vh', width: '100vw' }}>
             <object
-                data={`${process.env.PUBLIC_URL}/qawaacidularbac.pdf`}
+                data={`${process.env.PUBLIC_URL}${PDFURL}`}
                 type="application/pdf"
                 width="100%"
                 height="100%"
