@@ -67,23 +67,39 @@ function App() {
   };
 
   const handleIncrementBook = () => {
-    const currentIndex = currentBookList.indexOf(currentBook);
-    const nextIndex = (currentIndex + 1) % currentBookList.length;
-    const previousIndex = (currentIndex + currentBookList.length - 1) % currentBookList.length;
-
-    setPreviousBook(currentBook);
-    setCurrentBook(currentBookList[nextIndex]);
-    setNextBook(currentBookList[(nextIndex + 1) % currentBookList.length]);
+    if(currentBookList.indexOf(nextBook) == currentBookList.length - 1){
+      setNextBook(currentBookList[0])
+    }
+    else{
+      setNextBook(currentBookList[currentBookList.indexOf(nextBook) + 1])
+    }
+    if(currentBookList.indexOf(previousBook) == currentBookList.length - 1){
+      setPreviousBook(currentBookList[0])
+    }
+    else{
+      setPreviousBook(currentBookList[currentBookList.indexOf(previousBook) + 1])
+    }
   };
 
   const handleDecrementBook = () => {
-    const currentIndex = currentBookList.indexOf(currentBook);
-    const previousIndex = (currentIndex + currentBookList.length - 1) % currentBookList.length;
-    const nextIndex = (currentIndex + 1) % currentBookList.length;
-
-    setPreviousBook(currentBookList[previousIndex]);
-    setCurrentBook(currentBookList[previousIndex]);
-    setNextBook(currentBook);
+    if(currentBookList.indexOf(previousBook) == 0){
+      setPreviousBook(currentBookList[currentBookList.length - 1])
+    }
+    else{
+      setPreviousBook(currentBookList[currentBookList.indexOf(previousBook) - 1])
+    }
+    if(currentBookList.indexOf(currentBook) == 0){
+      setCurrentBook(currentBookList[currentBookList.length - 1])
+    }
+    else{
+      setCurrentBook(currentBookList[currentBookList.indexOf(currentBook) - 1])
+    }
+    if(currentBookList.indexOf(nextBook) == 0){
+      setNextBook(currentBookList[currentBookList.length - 1])
+    }
+    else{
+      setNextBook(currentBookList[currentBookList.indexOf(nextBook) - 1])
+    }
   };
 
   return (
