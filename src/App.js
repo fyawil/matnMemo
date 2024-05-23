@@ -1,4 +1,5 @@
 import PDFViewer from './PDFViewer';
+import BookSelector from './BookSelector';
 import { useState } from 'react';
 
 function App() {
@@ -104,7 +105,16 @@ function App() {
 
   return (
     <div style={{textAlign: 'center'}}>
-      <h1>بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</h1>
+      <div style={{display: 'flex', justifyContent: 'space-evenly'}}>
+      <BookSelector 
+        setCurrentBook={setCurrentBook}
+        setPreviousBook={setPreviousBook} 
+        setNextBook={setNextBook}
+        currentBookList={currentBookList}
+        pdfs={pdfs}
+        />
+        <h1>بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</h1>
+      </div>
       <div style={{display: 'flex', justifyContent: 'space-evenly'}}>
         <p onClick={handleDecrementBook}>{pdfs[previousBook].arabicName}</p>
         <h2>{pdfs[currentBook].arabicName}</h2>
