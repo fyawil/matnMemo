@@ -105,16 +105,14 @@ function App() {
 
   return (
     <div style={{textAlign: 'center'}}>
-      <div style={{display: 'flex', justifyContent: 'space-evenly'}}>
-      <BookSelector 
+        <h1>بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</h1>
+        <BookSelector
         setCurrentBook={setCurrentBook}
         setPreviousBook={setPreviousBook} 
         setNextBook={setNextBook}
         currentBookList={currentBookList}
         pdfs={pdfs}
         />
-        <h1>بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</h1>
-      </div>
       <div style={{display: 'flex', justifyContent: 'space-evenly'}}>
         <p onClick={handleDecrementBook}>{pdfs[previousBook].arabicName}</p>
         <h2>{pdfs[currentBook].arabicName}</h2>
