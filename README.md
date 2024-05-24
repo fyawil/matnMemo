@@ -6,7 +6,7 @@ This React application allows users to view a selection of PDF documents in Arab
 
 - **PDF Viewer**: View PDF documents within the app.
 - **Book Selector**: Select from a list of available books.
-- **Navigation**: Navigate between previous, current, and next books in the list.
+- **Navigation**: Alternatively scroll through the availbale book directly above the currently displayed PDF.
 
 ## Installation
 
@@ -50,12 +50,13 @@ The pdfs object contains metadata for each book, including its Arabic name and U
 
 - `handleIncrementBook`: Handles the navigation to the next book.
 - `handleDecrementBook`: Handles the navigation to the previous book.
+- `handleChange`: Handles navigation to the selected book when the Book Selector dropdown menu is used
 
 ### PDFViewer.js
 This component is responsible for displaying the PDF document.
 
 ### BookSelector.js
-This component allows users to select a book from the list.
+This component allows users to select a book from the list using a dropdown menu.
 
 ## File Structure
 
@@ -71,7 +72,6 @@ react-pdf-viewer-app/
 │   │   └── BookSelector.js
 │   ├── App.js
 │   ├── index.js
-│   └── styles.css
 ├── package.json
 └── README.md
 ```
