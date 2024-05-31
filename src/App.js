@@ -74,6 +74,12 @@ function App() {
     else{
       setNextBook(currentBookList[currentBookList.indexOf(nextBook) + 1])
     }
+    if(currentBookList.indexOf(currentBook) == currentBookList.length - 1){
+      setCurrentBook(currentBookList[0])
+    }
+    else{
+      setCurrentBook(currentBookList[currentBookList.indexOf(currentBook) + 1])
+    }
     if(currentBookList.indexOf(previousBook) == currentBookList.length - 1){
       setPreviousBook(currentBookList[0])
     }
