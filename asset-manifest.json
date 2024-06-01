@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/matnMemo/static/css/main.e6c13ad2.css",
-    "main.js": "/matnMemo/static/js/main.893b4dc0.js",
+    "main.js": "/matnMemo/static/js/main.f2acf818.js",
     "static/js/453.e000e982.chunk.js": "/matnMemo/static/js/453.e000e982.chunk.js",
     "index.html": "/matnMemo/index.html",
     "main.e6c13ad2.css.map": "/matnMemo/static/css/main.e6c13ad2.css.map",
-    "main.893b4dc0.js.map": "/matnMemo/static/js/main.893b4dc0.js.map",
+    "main.f2acf818.js.map": "/matnMemo/static/js/main.f2acf818.js.map",
     "453.e000e982.chunk.js.map": "/matnMemo/static/js/453.e000e982.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.893b4dc0.js"
+    "static/js/main.f2acf818.js"
   ]
 }
